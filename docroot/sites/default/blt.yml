@@ -1,0 +1,9 @@
+project:
+  local:
+    hostname: local.stanleycup2019.com
+    protocol: http
+  machine_name: stanleycup2019
+drush:
+  aliases:
+    local: self
+    remote: stanleycup2019.test

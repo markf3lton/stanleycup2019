@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.site2.com
+    protocol: http
+  machine_name: site2
+  human_name: site2
+drush:
+  aliases:
+    local: self
+    remote: site2.local
