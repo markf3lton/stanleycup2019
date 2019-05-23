@@ -41,6 +41,10 @@ apache_vhosts:
         servername: local.site2.com
         documentroot: '{{ drupal_core_path }}'
         extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
+    -
+        servername: local.quinnsite.com
+        documentroot: '{{ drupal_core_path }}'
+        extra_parameters: '{{ apache_vhost_php_fpm_parameters }}'
 mysql_databases:
     -
         name: drupal
@@ -48,6 +52,10 @@ mysql_databases:
         collation: utf8_general_ci
     -
         name: site2
+        encoding: utf8
+        collation: utf8_general_ci
+    -
+        name: quinnsite
         encoding: utf8
         collation: utf8_general_ci
 mysql_users:
@@ -61,6 +69,11 @@ mysql_users:
         host: '%'
         password: site2
         priv: 'site2%.*:ALL'
+    -
+        name: quinnsite
+        host: '%'
+        password: quinnsite
+        priv: 'quinnsite%.*:ALL'
 drupal_install_site: false
 configure_drush_aliases: false
 extra_packages:
